@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>SPOTILAM - Perfil de Usuario</title>
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="icon" href="img/SPOTILAM.png">
+</head>
+<body>
+    <header>
+        <div class="usuario">
+            <h2>Nombre de usuario</h2>
+            <a href="index.html">Cerrar sesión</a>
+        </div>
+        <div class="usuarioIcon">
+            <a href="perfil.html"><img src="img/perfilIcon.png" alt="perfilIcon" width="120px" height="120px"></a>
+        </div>        
+    </header>
+    <main>
+        <form action="index.html" method="POST" class="formPerfil" data-netlify="true">
+            <div>
+                <label for="usuario">Usuario</label>
+                <input type="text" name="usuario" id="usuario" placeholder="Ingresar usuario">
+            </div>
+            <div>
+                <label for="contraseña">Contraseña</label>
+                <input type="password" name="contraseña" id="contraseña" placeholder="Ingresar contraseña">
+            </div>
+            <div>
+                <label for="contraseña">Repetir Contraseña</label>
+                <input type="password" name="contraseña" id="contraseña" placeholder="Ingresar contraseña">
+            </div>
+            <div>
+                <label for="fecha">Fecha de nacimiento</label>
+                <input type="date" name="fecha" id="fecha" value="2023-10-08" readonly>
+            </div>
+            <div>
+                <label for="email">e-mail</label>
+                <input type="email" name="email" id="email" placeholder="Ingresar e-mail">
+            </div>
+            <div>
+                <a href="premium.html">Premium</a>
+            </div>
+            <div>
+                <a href="index.html">Eliminar usuario</a>
+            </div>
+            <div class="botones">
+                <a href="home.html">Volver al Home</a>
+                <input type="submit" value="Guardar">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <h3>Nombre y Apellido: Rodolfo Gutierrez<br>DNI: 43054649</h3>
+    </footer>
+</body>
+</html>

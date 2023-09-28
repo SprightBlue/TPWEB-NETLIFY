@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+}
+
+h1{
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+h2, h3, h4, h5, h6{
+    font-family: Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+
+label, input, a, p{
+    font-family: Garamond, serif;
+}
+
+label{
+    color: white;
+    margin: 4px;
+}
+
+input, p{
+    color: grey;
+}
+
+input{
+    width: 15em;
+    height: 2em;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-shadow: 2px 2px lightgray;
+    margin: 4px;
+}
+
+a{
+    margin: 2px;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width:425px){
+    body{
+        font-size: 70%;
+    }
+
+    input{
+        width: 10.5em;
+        height: 1.4em;
+    }
+}
+
+@media screen and (min-width:426px) and (max-width: 768px){
+    body{
+        font-size: 80%;
+    }
+
+    input{
+        width: 12em;
+        height: 1.6em;
+    }
+
+}
