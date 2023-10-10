@@ -6,11 +6,11 @@ body{
 
 header{
     display: grid;
-    grid-template-areas: ". . usuario usuarioIcon";
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .usuario{
-    grid-area: usuario;
+    grid-column: 5;
     justify-self: right;
     align-self: center;
 }
@@ -21,9 +21,18 @@ header{
 }
 
 .usuarioIcon{
-    grid-area: usuarioIcon;
+    grid-column: 6;
     justify-self: left;
     align-self: center;
+}
+
+.usuarioIcon img{
+    width: 120px;
+    height: 120px;
+}
+
+main{
+    margin: auto 0;
 }
 
 form{
@@ -31,20 +40,14 @@ form{
     border: 2px solid black;
     box-shadow: 4px 4px black;
     padding: 2em;
+    margin: auto;
 }
 
 .formInicio{
-    margin: 8em auto;
-    width: 15em;
+    width: 16em;
 }
 
-.formRegistro{
-    margin: 6em auto;
-    width: 25em;
-}
-
-.formPerfil{
-    margin: 1em auto;
+.formRegistro, .formPerfil{
     width: 25em;
 }
 
@@ -106,30 +109,50 @@ a:hover{
     justify-content: space-evenly;
 }
 
+.botones .volver{
+    width: 8.5em;
+}
+
 footer{
     margin-top: auto;
 }
 
 @media screen and (max-width:425px){
     body{
-        width: 100%; 
+        width: 100%;
+        margin: 0;
     }
 
     header{
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
     }
 
-    .usuario, .usuarioIcon{
-        margin: auto;
+    .usuario{
+        grid-column: 3;
+    }
+    
+    .usuarioIcon{
+        grid-column: 4;
     }
 
-    .formRegistro, .formPerfil{
-        width: 20em;
+    .usuarioIcon img{
+        width: 90px;
+        height: 90px;
     }
 
-    .formRegistro label, .formPerfil label{
-        width: 5em;
+    main{
+        margin: auto 0;
+    }
+
+    .formInicio, .formRegistro, .formPerfil{
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        padding: 1em 0;
+        text-align: center;
     }
 
     #fecha{
@@ -140,15 +163,29 @@ footer{
         width: 7em;
     }
 
-    .botones a{
+    .botones a, .botones .volver{
         width: 8em;
     }
 
 }
 
-@media screen and (min-width:426px) and (max-width: 768px){
+@media screen and (min-width: 426px) and (max-width: 768px){
     body{
         width: 100%;
+    }
+
+    main{
+        margin: auto 0;
+    }
+
+    .formInicio{
+        margin: auto;
+        width: 25%;
+    }
+
+    .formRegistro, .formPerfil{
+        margin: auto;
+        width: 40%;
     }
 
     #inicio, #registro, .botones input{
@@ -157,6 +194,10 @@ footer{
 
     .botones a{
         width: 6.5em;
+    }
+
+    .botones .volver{
+        width: 8em;
     }
 
 }
