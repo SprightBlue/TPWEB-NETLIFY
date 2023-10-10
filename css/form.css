@@ -60,10 +60,6 @@ label{
     display: block;
 }
 
-#fecha{
-    width: 7.5em;
-}
-
 .enlaces{
     display: flex;
     justify-content: center;
@@ -153,10 +149,6 @@ footer{
         border-bottom: 2px solid black;
         padding: 1em 0;
         text-align: center;
-    }
-
-    #fecha{
-        width: 7em;
     }
 
     #inicio, #registro, .botones input{

@@ -123,10 +123,6 @@ form{
     box-shadow: none;
 }
 
-#vto{
-    width: 7.5em;
-}
-
 .botones{
     grid-area: botones;
     display: flex;
