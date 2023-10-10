@@ -218,7 +218,7 @@ th, td{
 
 .reproductor input{ 
     box-shadow: none;
-    width: 100vh;
+    width: 90vh;
     display: flex;
     align-items: center;
 }
@@ -316,7 +316,7 @@ footer{
         padding: 0;
     }
 
-    .tabla{
+    table{
         width: 25em;
     }
 
@@ -371,4 +371,5 @@ footer{
     .reproductor input{
         width: 30em;
     }
+
 }
