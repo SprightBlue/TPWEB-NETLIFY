@@ -161,15 +161,15 @@ section{
 }
 
 .albums div{
-    height: 200px;
-    width: 200px;
+    height: 208px;
+    width: 208px;
     position: relative;
 }
 
 .favorito{
     position: absolute;
-    top: 1px;
-    right: 1px;
+    top: 2px;
+    right: 2px;
 }
 
 .favorito .star, .play, .search, .volume{
