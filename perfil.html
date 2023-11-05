@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPOTILAM - Perfil de Usuario</title>
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/form.css">
@@ -11,15 +11,15 @@
 <body>
     <header>
         <div class="usuario">
-            <h2>Nombre de usuario</h2>
-            <a href="index.html">Cerrar sesión</a>
+            <h2 id="nombreUsuario">Nombre de usuario</h2>
+            <a href="index.html" id="cerrarSesion">Cerrar sesión</a>
         </div>
         <div class="usuarioIcon">
             <a href="perfil.html"><img src="img/perfilIcon.png" alt="perfilIcon"></a>
         </div>        
     </header>
     <main>
-        <form action="index.html" method="get" class="formPerfil" data-netlify="true">
+        <form action="javascript:void(0);" method="get" id="formPerfil" data-netlify="true">
             <div>
                 <label for="usuario">Usuario</label>
                 <input type="text" name="usuario" id="usuario" placeholder="Ingresar usuario">
@@ -29,31 +29,43 @@
                 <input type="password" name="contraseña" id="contraseña" placeholder="Ingresar contraseña">
             </div>
             <div>
-                <label for="contraseña">Repetir Contraseña</label>
-                <input type="password" name="contraseña" id="contraseña" placeholder="Ingresar contraseña">
+                <label for="repContraseña">Repetir Contraseña</label>
+                <input type="password" name="repContraseña" id="repContraseña" placeholder="Ingresar contraseña">
             </div>
             <div>
                 <label for="fecha">Fecha de nacimiento</label>
-                <input type="date" name="fecha" id="fecha" value="2023-10-08" readonly>
+                <input type="date" name="fecha" id="fecha" readonly>
             </div>
             <div>
                 <label for="email">e-mail</label>
                 <input type="email" name="email" id="email" placeholder="Ingresar e-mail">
             </div>
             <div>
-                <a href="premium.html">Premium</a>
+                <a href="premium.html" class="enlacePremium">Premium</a>
             </div>
             <div>
-                <a href="index.html">Eliminar usuario</a>
+                <a href="index.html" id="eliminarUsuario">Eliminar usuario</a>
             </div>
             <div class="botones">
-                <a href="home.html" class="volver">Volver al Home</a>
-                <input type="submit" value="Guardar">
-            </div>
+                <input type="submit" value="Volver al Home" id="volver">
+                <input type="submit" value="Guardar" id="guardar">
+                <dialog id="dialogModal">
+                <p>Datos guardados correctamente</p>
+                <div>
+                    <button class="close">Cerrar</button>
+                    <button class="home">Home</button> 
+                </div>
+                </dialog> 
+                <dialog id="dialogError">
+                    <p>Los datos ingresados no se pueden guardar</p>
+                    <button class="closeError">Cerrar</button>
+                </dialog>
+            </div>   
         </form>
     </main>
     <footer>
         <h3>Nombre y Apellido: Rodolfo Gutierrez<br>DNI: 43054649</h3>
     </footer>
+    <script src="js/perfil.js"></script>
 </body>
 </html>

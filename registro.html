@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPOTILAM - Registro de Usuario</title>
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/form.css">
@@ -11,7 +11,7 @@
 <body>
     <header></header>
     <main>
-        <form action="index.html" method="get" class="formRegistro" data-netlify="true">
+        <form action="javascript:void(0);" method="get" id="formRegistro" data-netlify="true">
             <div>
                 <label form="nombre">Nombre de usuario</label>
                 <input type="text" name="nombre" id="nombre" placeholder="Ingresar nombre de usuario">  
@@ -33,15 +33,20 @@
                 <input type="date" name="fecha" id="fecha">
             </div>
             <div class="enlaces">
-                <a href="premium.html">Volvete Premium</a>
+                <a href="premium.html" class="enlacePremium">Volvete Premium</a>
             </div>
             <div class="enlaces">
                 <input type="submit" value="Registrarse" id="registro"> 
+                <dialog id="dialogRegistration">
+                    <p>Los datos ingresados no se pueden registrar</p>
+                    <button class="close">Cerrar</button>
+                </dialog>
             </div>
         </form>
     </main>
     <footer>
         <h3>Nombre y Apellido: Rodolfo Gutierrez<br>DNI: 43054649</h3>
     </footer>
+    <script src="js/registro.js"></script>
 </body>
 </html>

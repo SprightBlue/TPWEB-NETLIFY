@@ -43,6 +43,21 @@ a:hover{
     cursor: pointer;
 }
 
+dialog{
+    background-color: #6441a4;
+    color: black;
+    text-align: center;
+}
+
+dialog p{
+    color: white;
+}
+
+dialog button:hover{
+    background-color: #3fb950;
+    color: white;
+}
+
 footer{
     background-color: black;
     color: white;

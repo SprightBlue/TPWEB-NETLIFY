@@ -65,7 +65,7 @@ form{
     box-shadow: 4px 4px black;
 }
 
-.formPlanes{
+#formPlanes{
     display: grid;
     grid-template-areas: "mensual anual vitalicio"
                         "botones botones botones";
@@ -77,12 +77,12 @@ form{
     grid-column-gap: 0.5em;
 }
 
-.formPagar{
+#formPagar{
     margin: 2em auto;
     width: 28em;
 }
 
-.formPagar label{
+#formPagar label{
     display: inline-block;
     width: 10em;
 }
@@ -111,7 +111,7 @@ form{
     margin: 1em;
 }
 
-.formPlanes label{
+#formPlanes label{
     display: block;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
@@ -119,7 +119,7 @@ form{
     margin: 4px;
 }
 
-.formPlanes input{
+#formPlanes input{
     box-shadow: none;
 }
 
@@ -131,30 +131,16 @@ form{
     margin: 4px;
 }
 
-.botones input, .botones a{
+.botones input{
     width: 8em;
     color: #6441a4;
     text-align: center;
     background-color: lightgrey;
 }
 
-.botones input:hover, .botones a:hover{
+.botones input:hover{
     background-color: #3fb950;
     cursor: pointer;
-}
-
-.botones a{
-    height: 1.35em;
-    width: 6.25em;
-    border: 2px solid black;
-    border-radius: 4px;
-    box-shadow: 2px 2px lightgray;
-    margin: 4px;
-    text-decoration: none;
-}
-
-.botones a:hover{
-    color: #6441a4;
 }
 
 a{
@@ -163,11 +149,6 @@ a{
 
 a:hover{
     color: #3fb950;
-}
-
-input::-webkit-inner-spin-button, ::-webkit-outer-spin-button{
-    -webkit-appearance: none;
-    margin-right: 0;
 }
 
 footer{
@@ -208,7 +189,7 @@ footer{
         height: 90px;
     }
 
-    .formPlanes{
+    #formPlanes{
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -239,7 +220,7 @@ footer{
         align-items: center;
     }
 
-    .formPagar{
+    #formPagar{
         box-shadow: none;
         border: none;
         border-top: 2px solid black;
@@ -260,10 +241,6 @@ footer{
         width: 7em;
     }
 
-    .botones a{
-        width: 8em;
-    }
-
 }
 
 @media screen and (min-width:426px) and (max-width: 768px){
@@ -275,11 +252,11 @@ footer{
         width: 60%;
     }
 
-    .formPagar{
+    #formPagar{
         width: 75%;
     }
 
-    .formPlanes{
+    #formPlanes{
         width: 85%;
     }
 
@@ -287,7 +264,4 @@ footer{
         width: 7.5em;
     }
 
-    .botones a{
-        width: 6.5em;
-    }
 }

@@ -31,11 +31,11 @@ h1{
     background-color: white;
     display: flex;
     flex-direction: row;
-    border: 2px solid black;
+    border: 2px solid lightslategray;
     border-radius: 32px;
     margin: 8px auto;
     padding: 4px;
-    height: 2em;
+    height: 1.5em;
 }
 
 .buscador input{
@@ -160,19 +160,19 @@ section{
     padding: 2em;
 }
 
-.albums div{
-    height: 208px;
-    width: 208px;
+.listAlbum{
+    height: 204px;
+    width: 204px;
     position: relative;
 }
 
-.favorito{
+.star{
     position: absolute;
-    top: 2px;
-    right: 2px;
+    top: 10px;
+    right: 10px;
 }
 
-.favorito .star, .play, .search, .volume{
+.star, .play, .search, .volume{
     font-size: 20px;
     border: none;
     display: flex;
@@ -180,37 +180,57 @@ section{
     margin: auto;
 }
 
-.albums img, aside img{
-    border: 2px solid black;
-}
-
 .tabla{
     height: 50vh;
-    margin: 2em 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 3fr) repeat(2, 2fr);
 }
 
-table{
-    width: 100%;
+.columna1{
+    grid-column: 1;
 }
 
-table, th, td{
-    border: 2px solid black;
+.columna2{
+    grid-column: 2;
+}
+
+.columna3{
+    grid-column: 3;
+}
+
+.columna4{
+    grid-column: 4;
+}
+
+.columna5{
+    grid-column: 5;
+}
+
+.tituloColumna, .filas{
+    border: 2px solid lightslategray;
     border-collapse: collapse;
 }
 
-th, td{
-    width: 20%;
-    text-align: center;
-    height: 10vh;
-    margin: 0;
-    position: relative;
+.tituloColumna{
+    height: 3em;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.filas{
+    height: 2em;
 }
 
 .reproductor{
     background-color: white;
     display: flex;
     flex-direction: row;
-    border: 2px solid black;
+    border: 2px solid lightslategray;
     height: 2.5em;
     margin: 1em auto;
     padding: 1em;
@@ -218,7 +238,7 @@ th, td{
 
 .reproductor input{ 
     box-shadow: none;
-    width: 90vh;
+    width: 100vh;
     display: flex;
     align-items: center;
 }
@@ -316,12 +336,8 @@ footer{
         padding: 0;
     }
 
-    table{
+    .tabla{
         width: 25em;
-    }
-
-    th, td{
-        height: 5em;
     }
 
     .reproductor{
@@ -364,7 +380,7 @@ footer{
         padding: 3px;
     }
 
-    table{
+    .tabla{
         width: 40em;
     }
 

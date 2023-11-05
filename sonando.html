@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPOTILAM - Musica sonando</title>
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/principal.css">
@@ -10,9 +10,10 @@
 </head>
 <body>
     <header>
+        <h1 class="titulo"></h1>
         <div class="usuario">
-            <h2>Nombre de usuario</h2>
-            <a href="index.html">Cerrar sesión</a>
+            <h2 class="nombreUsuario">Nombre de usuario</h2>
+            <a href="index.html" class="cerrarSesion">Cerrar sesión</a>
         </div>
         <div class="usuarioIcon">
             <a href="perfil.html"><img src="img/perfilIcon.png" alt="perfilIcon" width="120px" height="120px"></a>
@@ -26,77 +27,79 @@
     </nav>
     <aside>
         <div>
-            <img src="img/Two_Door_Cinema_Club_-_Tourist_History.png" alt="twoDoorCinemaClub" class="albumSonando">
-            <span class="favorito"><img src="img/star.png" alt="star" width="25px" height="25px" class="star"></span>
+            <img src="img/Two Door Cinema Club.jpg" alt="albumSonando" class="albumSonando"> 
         </div>
-        <p>Canción</p>
-        <p>Artista</p>
-        <p>Album</p>    
+        <p class="albumNombre">Two Door Cinema Club</p>
+        <p class="cancionNombre"></p>    
     </aside>
     <main>
         <section>
             <article class="tabla">
-                <table>
-                    <tr>
-                        <th></th>
-                        <th>Canción</th>
-                        <th>Album</th>
-                        <th>Duración</th>
-                        <th>Reproducciones</th>
-                    </tr>
-                    <tr>
-                        <td><img src="img/play.png" alt="play" width="25px" height="25px" class="play"></td>
-                        <td>
-                            <p>Canción 1</p>
-                            <span class="favorito"><img src="img/star.png" alt="star" width="25px" height="25px" class="star"></span>
-                        </td>
-                        <td>
-                            <p>Album 1</p>
-                            <span class="favorito"><img src="img/star.png" alt="star" width="25px" height="25px" class="star"></span>
-                        </td>
-                        <td>4:00</td>
-                        <td>1500</td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/play.png" alt="play" width="25px" height="25px" class="play"></td>
-                        <td>
-                            <p>Canción 2</p>
-                            <span class="favorito"><img src="img/star.png" alt="star" width="25px" height="25px" class="star"></i></span>
-                        </td>
-                        <td>
-                            <p>Album 2</p>
-                            <span class="favorito"><img src="img/star.png" alt="star" width="25px" height="25px" class="star"></span>
-                        </td>
-                        <td>3:00</td>
-                        <td>2000</td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/play.png" alt="play" width="25px" height="25px" class="play"></td>
-                        <td>
-                            <p>Canción 3</p>
-                            <span class="favorito"><img src="img/star.png" alt="star" width="25px" height="25px" class="star"></span>
-                        </td>
-                        <td>
-                            <p>Album 3</p>
-                            <span class="favorito"><img src="img/star.png" alt="star" width="25px" height="25px" class="star"></span>
-                        </td>
-                        <td>4:00</td>
-                        <td>3500</td>
-                    </tr>
-                    <tr>
-                        <td><img src="img/play.png" alt="play" width="25px" height="25px" class="play"></td>
-                        <td>
-                            <p>Canción 4</p>
-                            <span class="favorito"><img src="img/star.png" alt="star" width="25px" height="25px" class="star"></span>
-                        </td>
-                        <td>
-                            <p>Album 4</p>
-                            <span class="favorito"><img src="img/star.png" alt="star" width="25px" height="25px" class="star"></span>
-                        </td>
-                        <td>3:00</td>
-                        <td>1000</td>
-                    </tr>
-                </table>
+                <div class="columna1">
+                    <div class="tituloColumna"></div>
+                    <div class="filas"><img src="img/play.png" alt="play1" width="25px" height="25px" class="playSong"></div>
+                    <div class="filas"><img src="img/play.png" alt="play2" width="25px" height="25px" class="playSong"></div>
+                    <div class="filas"><img src="img/play.png" alt="play3" width="25px" height="25px" class="playSong"></div>
+                    <div class="filas"><img src="img/play.png" alt="play4" width="25px" height="25px" class="playSong"></div>
+                    <div class="filas"><img src="img/play.png" alt="play5" width="25px" height="25px" class="playSong"></div>
+                    <div class="filas"><img src="img/play.png" alt="play6" width="25px" height="25px" class="playSong"></div>
+                    <div class="filas"><img src="img/play.png" alt="play7" width="25px" height="25px" class="playSong"></div>
+                    <div class="filas"><img src="img/play.png" alt="play8" width="25px" height="25px" class="playSong"></div>
+                    <div class="filas"><img src="img/play.png" alt="play9" width="25px" height="25px" class="playSong"></div>
+                    <div class="filas"><img src="img/play.png" alt="play10" width="25px" height="25px" class="playSong"></div>
+                </div>
+                <div class="columna2">
+                    <div class="tituloColumna">Canción</div>
+                    <div class="filas"><img src="img/star.png" alt="Canción1" width="25px" height="25px" class="songs">Canción1</div>
+                    <div class="filas"><img src="img/star.png" alt="Canción2" width="25px" height="25px" class="songs">Canción2</div>
+                    <div class="filas"><img src="img/star.png" alt="Canción3" width="25px" height="25px" class="songs">Canción3</div>
+                    <div class="filas"><img src="img/star.png" alt="Canción4" width="25px" height="25px" class="songs">Canción4</div>
+                    <div class="filas"><img src="img/star.png" alt="Canción5" width="25px" height="25px" class="songs">Canción5</div>
+                    <div class="filas"><img src="img/star.png" alt="Canción6" width="25px" height="25px" class="songs">Canción6</div>
+                    <div class="filas"><img src="img/star.png" alt="Canción7" width="25px" height="25px" class="songs">Canción7</div>
+                    <div class="filas"><img src="img/star.png" alt="Canción8" width="25px" height="25px" class="songs">Canción8</div>
+                    <div class="filas"><img src="img/star.png" alt="Canción9" width="25px" height="25px" class="songs">Canción9</div>
+                    <div class="filas"><img src="img/star.png" alt="Canción10" width="25px" height="25px" class="songs">Canción10</div>
+                </div>
+                <div class="columna3">
+                    <div class="tituloColumna">Album</div>
+                    <div class="filas"><img src="img/star.png" alt="album1" width="25px" height="25px" class="albumSong"><span class="filasAlbums"></span></div>
+                    <div class="filas"><img src="img/star.png" alt="album2" width="25px" height="25px" class="albumSong"><span class="filasAlbums"></span></div>
+                    <div class="filas"><img src="img/star.png" alt="album3" width="25px" height="25px" class="albumSong"><span class="filasAlbums"></span></div>
+                    <div class="filas"><img src="img/star.png" alt="album4" width="25px" height="25px" class="albumSong"><span class="filasAlbums"></span></div>
+                    <div class="filas"><img src="img/star.png" alt="album5" width="25px" height="25px" class="albumSong"><span class="filasAlbums"></span></div>
+                    <div class="filas"><img src="img/star.png" alt="album6" width="25px" height="25px" class="albumSong"><span class="filasAlbums"></span></div>
+                    <div class="filas"><img src="img/star.png" alt="album7" width="25px" height="25px" class="albumSong"><span class="filasAlbums"></span></div>
+                    <div class="filas"><img src="img/star.png" alt="album8" width="25px" height="25px" class="albumSong"><span class="filasAlbums"></span></div>
+                    <div class="filas"><img src="img/star.png" alt="album9" width="25px" height="25px" class="albumSong"><span class="filasAlbums"></span></div>
+                    <div class="filas"><img src="img/star.png" alt="album10" width="25px" height="25px" class="albumSong"><span class="filasAlbums"></span></div>
+                </div>
+                <div class="columna4">
+                    <div class="tituloColumna">Duración</div>
+                    <div class="filas">4:00</div>
+                    <div class="filas">4:00</div>
+                    <div class="filas">4:00</div>
+                    <div class="filas">4:00</div>
+                    <div class="filas">4:00</div>
+                    <div class="filas">4:00</div>
+                    <div class="filas">4:00</div>
+                    <div class="filas">4:00</div>
+                    <div class="filas">4:00</div>
+                    <div class="filas">4:00</div>
+                </div>
+                <div class="columna5">
+                    <div class="tituloColumna">Reproducciones</div>
+                    <div class="filas">1995</div>
+                    <div class="filas">1995</div>
+                    <div class="filas">1995</div>
+                    <div class="filas">1995</div>
+                    <div class="filas">1995</div>
+                    <div class="filas">1995</div>
+                    <div class="filas">1995</div>
+                    <div class="filas">1995</div>
+                    <div class="filas">1995</div>
+                    <div class="filas">1995</div>
+                </div>               
             </article>
             <article class="reproductor">
                 <img src="img/play.png" alt="play" width="25px" height="25px" class="play">
@@ -108,5 +111,6 @@
     <footer>
         <h3>Nombre y Apellido: Rodolfo Gutierrez<br>DNI: 43054649</h3>
     </footer>
+    <script src="js/sonando.js"></script>
 </body>
 </html>

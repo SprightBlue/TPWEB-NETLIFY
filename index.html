@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPOTILAM - Inicio de sesión</title>
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/form.css">
@@ -11,17 +11,21 @@
 <body>
     <header></header>
     <main>
-        <form action="home.html" method="get" class="formInicio" data-netlify="true">
+        <form action="javascript:void(0);" method="get" id="formInicio" data-netlify="true">
             <div>
-                <label for="Usuario">Usuario </label>
-                <input type="text" name="Usuario" id="Usuario" placeholder="Ingresar usuario">
+                <label for="usuario">Usuario</label>
+                <input type="text" name="usuario" id="usuario" placeholder="Ingresar usuario">
             </div>
             <div>
-                <label for="Contraseña">Contraseña</label>
-                <input type="password" name="Contraseña" id="Contraseña" placeholder="Ingresar contraseña">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" name="contraseña" id="contraseña" placeholder="Ingresar contraseña">
             </div>
             <div class="enlaces">
                 <input type="submit" value="Iniciar sesión" id="inicio">
+                <dialog id="dialogIndex">
+                    <p>El usuario y/o contraseña es incorrecto</p>
+                    <button class="close">Cerrar</button>
+                </dialog>
             </div>
             <div class="enlaces">
                 <a href="registro.html">Registrarme</a>
@@ -31,5 +35,6 @@
     <footer>
         <h3>Nombre y Apellido: Rodolfo Gutierrez<br>DNI: 43054649<h3>
     </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>

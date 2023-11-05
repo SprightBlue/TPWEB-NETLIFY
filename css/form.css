@@ -43,15 +43,15 @@ form{
     margin: auto;
 }
 
-.formInicio{
+#formInicio{
     width: 16em;
 }
 
-.formRegistro, .formPerfil{
+#formRegistro, #formPerfil{
     width: 25em;
 }
 
-.formRegistro label,.formPerfil label{
+#formRegistro label, #formPerfil label{
     display: inline-block;
     width: 8em;
 }
@@ -65,30 +65,16 @@ label{
     justify-content: center;
 }
 
-#inicio, #registro, .botones input, .botones a{
+#inicio, #registro, .botones input{
     width: 8em;
     color: #6441a4;
     text-align: center;
     background-color: lightgray;
 }
 
-#inicio:hover, #registro:hover, .botones input:hover, .botones a:hover{
+#inicio:hover, #registro:hover, .botones input:hover{
     background-color: #3fb950;
     cursor: pointer;
-}
-
-.botones a{
-    height: 1.35em;
-    width: 6.25em;
-    border: 2px solid black;
-    border-radius: 4px;
-    box-shadow: 2px 2px lightgray;
-    margin: 4px;
-    text-decoration: none;
-}
-
-.botones a:hover{
-    color: #6441a4;
 }
 
 a{
@@ -103,10 +89,6 @@ a:hover{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-}
-
-.botones .volver{
-    width: 8.5em;
 }
 
 footer{
@@ -141,7 +123,7 @@ footer{
         margin: auto 0;
     }
 
-    .formInicio, .formRegistro, .formPerfil{
+    #formInicio, #formRegistro, #formPerfil{
         width: 100%;
         box-shadow: none;
         border: none;
@@ -155,10 +137,6 @@ footer{
         width: 7em;
     }
 
-    .botones a, .botones .volver{
-        width: 8em;
-    }
-
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px){
@@ -170,12 +148,12 @@ footer{
         margin: auto 0;
     }
 
-    .formInicio{
+    #formInicio{
         margin: auto;
         width: 25%;
     }
 
-    .formRegistro, .formPerfil{
+    #formRegistro, #formPerfil{
         margin: auto;
         width: 40%;
     }
@@ -183,13 +161,4 @@ footer{
     #inicio, #registro, .botones input{
         width: 7.5em;
     }
-
-    .botones a{
-        width: 6.5em;
-    }
-
-    .botones .volver{
-        width: 8em;
-    }
-
 }
