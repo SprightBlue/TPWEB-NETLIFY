@@ -8,7 +8,6 @@ let usuarios;
 
 let contenedorLista = document.querySelector(".albums"); 
 let listaAlbums = document.querySelectorAll(".listAlbum");
-let albumsArray = Array.from(listaAlbums);
 let favoritos = document.querySelectorAll(".star");
 
 const verificarListaDeUsuarios = () => {
@@ -89,9 +88,9 @@ clickVolume.addEventListener("click", (event) => {
 })
 
 search.addEventListener("keyup", (event) => {
+    let albumArray = Array.from(listaAlbums);
     borrarAlbums();   
-    let busqueda = search.value.toLowerCase();
-    let resultadoBusqueda = albumsArray.filter(element1=>element1.getAttribute("title").toLowerCase().includes(busqueda));
+    let resultadoBusqueda = albumArray.filter(element1=>element1.getAttribute("title").toLowerCase().includes(search.value.toLowerCase()));
     resultadoBusqueda.forEach(element2 => {
         contenedorLista.appendChild(element2);
     });

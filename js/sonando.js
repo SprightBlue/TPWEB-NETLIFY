@@ -20,14 +20,13 @@ const actualizarDatos = () => {
     document.querySelector(".nombreUsuario").textContent = usuarioEnSesion.nombre;
 }
 
-
 const actualizarAlbum = () => {
     const album = new URL(window.location.href).searchParams.get("album");
     document.querySelector(".titulo").textContent = `${album}`;
     if(album!=null){
         document.querySelector(".albumSonando").src = `img/${album}.jpg`;
         document.querySelector(".albumSonando").alt = `${album}`
-        document.querySelector(".albumNombre").textContent = `${album}`;        
+        document.querySelector(".albumNombre").textContent = `${album}`;       
     }
 
     let nombreAlbums = document.querySelectorAll(".filasAlbums");

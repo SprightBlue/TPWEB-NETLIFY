@@ -340,6 +340,10 @@ footer{
         width: 25em;
     }
 
+    .filas{
+        height: 5em;
+    }
+
     .reproductor{
         padding: 0;
         width: 100%;
@@ -382,6 +386,10 @@ footer{
 
     .tabla{
         width: 40em;
+    }
+
+    .filas{
+        height: 4em;
     }
 
     .reproductor input{
