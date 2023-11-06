@@ -95,7 +95,7 @@ const clickAlbumFavorito = (event) => {
     });
 }
 
-const clickCancionesFavoritas = (event) => {
+let clickCancionesFavoritas = (event) => {
     let cancionesFavoritas = document.querySelectorAll(".songs");
     cancionesFavoritas.forEach(element => {
         element.addEventListener("click", (event) => {
@@ -109,13 +109,15 @@ const clickCancionesFavoritas = (event) => {
                     }
                 }
                 actualizarLocalStorage();
+                //borrarCancionesNoFavoritas();
+                //actualizarCancionesFavoritas();
                 location.reload();
             }          
         })
     })
  }      
 
-const borrarCancionesNoFavoritas = () => {
+/*const borrarCancionesNoFavoritas = () => {
     let columna1 = document.querySelector(".columna1");
     let columna2 = document.querySelector(".columna2");
     let columna3 = document.querySelector(".columna3");
@@ -128,7 +130,7 @@ const borrarCancionesNoFavoritas = () => {
         columna4.removeChild(columna4.firstChild);
         columna5.removeChild(columna5.firstChild);
     }
-}
+}*/
 
 linkCloseSession.addEventListener("click", (event) =>{
     localStorage.removeItem("usuarioEnSesion");

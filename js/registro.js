@@ -1,6 +1,7 @@
 const btnSubmit = document.querySelector("#registro");
 const dialogRegistration = document.querySelector("#dialogRegistration");
 const btnClose = document.querySelector(".close");
+const linkClose = document.querySelector("#cerrarSesion");
 
 let usuarioEnSesion = JSON.parse(localStorage.getItem("usuarioEnSesion"));
 let usuarios;
@@ -14,8 +15,14 @@ const verificarListaDeUsuarios = () => {
 }
 
 const actualizarDatos = () => {
-    if(usuarioEnSesion==null || usuarioEnSesion.premium == true){
+    if(usuarioEnSesion==null){
+        document.querySelector(".headerRegistro").style.display = "none"
         document.querySelector(".enlacePremium").style.display = "none";
+    }else{
+        document.querySelector("#nombreUsuario").textContent = usuarioEnSesion.nombre;
+        if(usuarioEnSesion.premium == true){
+            document.querySelector(".enlacePremium").style.display = "none";
+        }
     }
 }
 
@@ -79,6 +86,9 @@ const verificarQueLosDatosNoSeanNulos = (nombre, contraseña, email, fecha) => {
 
 btnSubmit.addEventListener("click", registrarUsuario);
 btnClose.addEventListener("click", cerrarModal);
+linkClose.addEventListener("click", (event) => {
+    localStorage.removeItem("usuarioEnSesion");
+}) 
 
 verificarListaDeUsuarios();
 actualizarDatos();
