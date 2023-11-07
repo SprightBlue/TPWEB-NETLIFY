@@ -5,6 +5,7 @@ let clickVolume = document.querySelector(".volume");
 let usuarioEnSesion = JSON.parse(localStorage.getItem("usuarioEnSesion"));
 let usuarios;
 
+let listaFila = document.querySelectorAll(".filas");
 let favoritos = document.querySelectorAll(".songs");
 let albumFavorito = document.querySelectorAll(".albumSong")
 
@@ -28,14 +29,7 @@ const actualizarAlbum = () => {
         document.querySelector(".albumSonando").alt = `${album}`
         document.querySelector(".albumNombre").textContent = `${album}`;       
     }
-
-    let nombreAlbums = document.querySelectorAll(".filasAlbums");
-    nombreAlbums.forEach(element1 => {
-        element1.textContent = `${album}`;
-    });
-    albumFavorito.forEach(element2 => {
-        element2.alt = `${album}`;
-    });
+    borrarCanciones(album);
     albumFavorito.forEach(element3 => {
         let resultado = usuarioEnSesion.albums.some((album)=>album==element3.alt);
         if(resultado){
@@ -46,6 +40,15 @@ const actualizarAlbum = () => {
     });
     usuarioEnSesion.sonando = String(album);
     actualizarLocalStorage();
+}
+
+const borrarCanciones = (album) => {
+    listaFila.forEach(element => {
+        let arrayFila = element.getAttribute("title").split("-");
+        if(arrayFila[0]!=album){
+            element.style.display = "none";
+        }
+    });
 }
 
 const actualizarCanciones = (event) => {
@@ -94,15 +97,16 @@ const clickAlbumFavorito = (event) => {
 const clickCancionesFavoritas = (event) => {
     favoritos.forEach(element1 => {
         element1.addEventListener("click", (event) => {
-            let resultado = usuarioEnSesion.canciones.some((cancion)=> cancion.nombre==element1.alt && cancion.album==usuarioEnSesion.sonando);
+            let arrayCancion = element1.getAttribute("alt").split("-");
+            let resultado = usuarioEnSesion.canciones.some((cancion)=> cancion.nombre==arrayCancion[1] && cancion.album==arrayCancion[0]);
             let cancionVar = {
-                nombre: element1.alt,
-                album: usuarioEnSesion.sonando
+                nombre: arrayCancion[1],
+                album: arrayCancion[0]
             }           
             if(resultado){
                 element1.src = "img/star.png";
                 for(let i=0; i<usuarioEnSesion.canciones.length; i++){
-                    if(usuarioEnSesion.canciones[i].nombre==element1.alt && usuarioEnSesion.canciones[i].album==usuarioEnSesion.sonando){
+                    if(usuarioEnSesion.canciones[i].nombre==arrayCancion[1] && usuarioEnSesion.canciones[i].album==arrayCancion[0]){
                         usuarioEnSesion.canciones.splice(i, 1);
                     }
                 }
