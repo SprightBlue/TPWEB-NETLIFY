@@ -114,6 +114,16 @@ const verificarQueLosDatosNoSeanNulos = (nombre, contraseña, email) => {
     }
 }
 
+const eliminarUsuario = (event) => {
+    for(i in usuarios) {
+        if(usuarioEnSesion.nombre == usuarios[i].nombre){
+            usuarios.splice(i, 1);
+        }
+    localStorage.setItem("usuarios", usuarios);
+    localStorage.removeItem("usuarioEnSesion");
+    }
+};
+
 btnBack.addEventListener("click", volverAlHome);
 btnSave.addEventListener("click", guardarDatos); 
 linkClose.addEventListener("click", cerrarSesion);
