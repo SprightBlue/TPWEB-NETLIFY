@@ -121,7 +121,7 @@ const eliminarUsuario = (event) => {
             usuarios.splice(i, 1);
         }
     }    
-    localStorage.setItem("usuarios", usuarios);
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
     localStorage.removeItem("usuarioEnSesion");
 };
 
@@ -132,7 +132,6 @@ linkRemove.addEventListener("click", eliminarUsuario);
 btnClose.addEventListener("click", cerrarModal);
 btnHome.addEventListener("click", volverHomeModal);
 btnCloseError.addEventListener("click", cerrarModalError);
-
 
 verificarListaDeUsuarios();
 actualizarDatos();
