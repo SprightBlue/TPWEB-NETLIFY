@@ -7,6 +7,7 @@ const btnClose = document.querySelector(".close");
 const btnHome = document.querySelector(".home");
 const dialogError = document.querySelector("#dialogError");
 const btnCloseError = document.querySelector(".closeError");
+const dialogRemove = document.querySelector("#dialogRemove");
 
 let usuarioEnSesion = JSON.parse(localStorage.getItem("usuarioEnSesion"));
 let usuarios;
@@ -119,9 +120,9 @@ const eliminarUsuario = (event) => {
         if(usuarioEnSesion.nombre == usuarios[i].nombre){
             usuarios.splice(i, 1);
         }
+    }    
     localStorage.setItem("usuarios", usuarios);
     localStorage.removeItem("usuarioEnSesion");
-    }
 };
 
 btnBack.addEventListener("click", volverAlHome);
@@ -131,6 +132,7 @@ linkRemove.addEventListener("click", eliminarUsuario);
 btnClose.addEventListener("click", cerrarModal);
 btnHome.addEventListener("click", volverHomeModal);
 btnCloseError.addEventListener("click", cerrarModalError);
+
 
 verificarListaDeUsuarios();
 actualizarDatos();
